@@ -36,10 +36,7 @@ module cut() {
 	translate([0,0,-20])cylinder(r1=9.3,r2=8.6,h=4);
 	translate([0,0,5])screw_hole();
 	exhaust();
-	hull() {
-		exhaust_cut();
-		translate([0,0,-cube_l/2+(capsule_rest-4)-1])cylinder(r=capsule_top,h=capsule_rest+4,center=true);
-	}
+    translate([0,0,-cube_l/2+(capsule_rest-4)-1])cylinder(r=capsule_top+0.75,h=capsule_rest+4,center=true);
 }
 
 module exhaust_cut() {
